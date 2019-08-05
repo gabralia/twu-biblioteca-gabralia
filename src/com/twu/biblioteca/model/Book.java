@@ -2,14 +2,14 @@ package com.twu.biblioteca.model;
 
 public class Book {
 
-    private Integer id;
+    private String id;
     private String title;
     private String author;
     private String publishYear;
     private Double price;
     private Boolean available;
 
-    public Book(Integer id, String title, String author, String publishYear, Double price, Boolean available)
+    public Book(String id, String title, String author, String publishYear, Double price, Boolean available)
     {
         this.id = id;
         this.title = title;
@@ -19,7 +19,7 @@ public class Book {
         this.available = available;
     }
 
-    public Integer getId(){
+    public String getId(){
         return this.id;
     }
 

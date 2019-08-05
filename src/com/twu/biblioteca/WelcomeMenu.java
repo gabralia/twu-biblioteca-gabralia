@@ -31,15 +31,20 @@ public class WelcomeMenu {
     }
 
     private void handleMenu(String option){
+        String id;
         switch(option){
             case "1":
                 bookController.showBookList();
                 break;
             case "2":
-                bookController.checkoutBook();
+                System.out.println("please enter the Id of the book you want to checkout.");
+                id = scan.next();
+                bookController.checkoutBook(id);
                 break;
             case "3":
-                bookController.returnBook();
+                System.out.println("please enter the Id of the book you want to return.");
+                id = scan.next();
+                bookController.returnBook(id);
                 break;
             case "q":
                 System.out.println("Bye! See you next time!");
@@ -49,7 +54,4 @@ public class WelcomeMenu {
                 break;
         }
     }
-
-
-
 }
