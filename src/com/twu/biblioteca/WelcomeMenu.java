@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.controller.BookController;
+import com.twu.biblioteca.controller.MovieController;
 import com.twu.biblioteca.controller.UserController;
 
 import java.util.Scanner;
@@ -11,10 +12,12 @@ public class WelcomeMenu {
 
     private BookController bookController;
     private UserController userController;
+    private  MovieController movieController;
 
-    public WelcomeMenu(BookController bookController, UserController userController){
+    public WelcomeMenu(BookController bookController, UserController userController, MovieController movieController){
         this.bookController = bookController;
         this.userController = userController;
+        this.movieController = movieController;
     }
 
     public void welcome(){
@@ -53,6 +56,15 @@ public class WelcomeMenu {
                 System.out.println("please enter the Id of the book you want to return.");
                 id = scan.next();
                 bookController.returnBook(id);
+                break;
+            case "4":
+                movieController.showMovieList();
+                break;
+            case "5":
+                if (!userController.login()) break;
+                System.out.println("please enter the Id of the movie you want to checkout.");
+                id = scan.next();
+                movieController.checkoutMovie(id);
                 break;
             case "6":
                 if (!userController.login()) break;
