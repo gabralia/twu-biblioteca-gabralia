@@ -54,6 +54,10 @@ public class WelcomeMenu {
                 id = scan.next();
                 bookController.returnBook(id);
                 break;
+            case "6":
+                if (!userController.login()) break;
+                userController.showUserInformation();
+                break;
             case "q":
                 System.out.println("Bye! See you next time!");
                 System.exit(0);

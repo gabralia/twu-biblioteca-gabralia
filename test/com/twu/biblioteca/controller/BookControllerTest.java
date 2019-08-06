@@ -1,19 +1,19 @@
 package com.twu.biblioteca.controller;
 
 import com.twu.biblioteca.model.Book;
-import static org.hamcrest.CoreMatchers.*;
-
 import com.twu.biblioteca.model.User;
-import org.junit.After;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.After;
 
 import java.io.ByteArrayInputStream;
+import java.io.SequenceInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.io.SequenceInputStream;
 
 import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.*;
 
 public class BookControllerTest {
 
