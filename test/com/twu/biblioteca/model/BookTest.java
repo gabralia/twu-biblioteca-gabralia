@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 
 public class BookTest {
 
-    private Book book = new Book("1","The Secret Garden","Frances Hodgson Burnett","2014",28.0,true);
+    private Book book = new Book("1","The Secret Garden","Frances Hodgson Burnett","2014",28.0);
 
     @Test
     public void getId(){

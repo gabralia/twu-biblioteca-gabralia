@@ -8,15 +8,16 @@ public class Book {
     private String publishYear;
     private Double price;
     private Boolean available;
+    private String userId;
 
-    public Book(String id, String title, String author, String publishYear, Double price, Boolean available)
+    public Book(String id, String title, String author, String publishYear, Double price)
     {
         this.id = id;
         this.title = title;
         this.author = author;
         this.publishYear = publishYear;
         this.price = price;
-        this.available = available;
+        this.available = true;
     }
 
     public String getId(){
@@ -43,7 +44,15 @@ public class Book {
         return this.available;
     }
 
+    public String getUserId() {
+        return this.userId;
+    }
+
     public void setAvailable(Boolean available){
-        this.available =  available;
+        this.available = available;
+    }
+
+    public void setUserId(String userId){
+        this.userId = userId;
     }
 }
